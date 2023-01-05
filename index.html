@@ -45,7 +45,7 @@
       <hr />
     </nav>
     <main>
-      <div>
+      <div class="col-3">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="icon icon-tabler icon-tabler-lock"
@@ -64,21 +64,40 @@
           <path d="M8 11v-4a4 4 0 0 1 8 0v4" />
         </svg>
       </div>
-      <div>
+      <div class="col-3">
         <h1>ENCRIPTAR TEXTO</h1>
       </div>
-      <div>
-        <textarea name="" id="" rows="10"></textarea>
+      <div class="ta-box">
+        <textarea
+          name=""
+          id=""
+          rows="10"
+          class="ta"
+          placeholder="Ingrese el texto..."
+        ></textarea>
       </div>
       <div id="btn-box">
-        <button id="btn-e">Encriptar</button>
-        <button id="btn-d">Desencriptar</button>
+        <div id="btns">
+          <button id="btn-e" class="bh">Encriptar</button>
+          <button id="btn-d" class="bh">Desencriptar</button>
+        </div>
       </div>
-      <div>
-        <textarea name="" id="" rows="10"></textarea>
+      <div class="img-box">
+        <textarea
+          name=""
+          id=""
+          rows="10"
+          class="ta-r"
+          class="ta-box"
+          disabled
+        ></textarea>
+        <img src="./img/img.png" class="img-d" />
       </div>
-      <div style="display: flex; justify-content: center">
-        <button id="btn-c" class="btn">
+      <div
+        class="copy col-start-3"
+        style="display: none; justify-content: center"
+      >
+        <button id="btn-c" class="btn copy">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="icon icon-tabler icon-tabler-copy"
@@ -101,5 +120,6 @@
         </button>
       </div>
     </main>
+    <script src="./js/index.js"></script>
   </body>
 </html>
