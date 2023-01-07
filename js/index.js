@@ -19,6 +19,7 @@ btne.addEventListener("click", encriptar);
 btnd.addEventListener("click", desencriptar);
 copy.addEventListener("click", copiar);
 
+const llave = "¡?";
 function encriptar() {
   const vacio = sinTexto();
   if (vacio.length > 0) return alert(vacio);
@@ -26,18 +27,19 @@ function encriptar() {
   const texto = ta.value;
 
   let textoEncriptado = texto;
+
   let i = 1;
 
   for (const [k, v] of Object.entries(vocales)) {
     const regex = /k/g;
     textoEncriptado = textoEncriptado.replaceAll(k, v);
-    textoEncriptado = textoEncriptado.replaceAll(v, i);
+    textoEncriptado = textoEncriptado.replaceAll(v, i + llave);
     i++;
   }
 
   let j = 1;
   for (const [k, v] of Object.entries(vocales)) {
-    textoEncriptado = textoEncriptado.replaceAll(j, v);
+    textoEncriptado = textoEncriptado.replaceAll(j + llave, v);
     j++;
   }
 
